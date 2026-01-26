@@ -1,0 +1,109 @@
+/* Landing.module.css */
+
+/* Body / General */
+body {
+    background-color: #0F111A; /* Deep Dark Blue Background */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Glow Effects */
+.glow-bg {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+.glow-1 {
+    top: -100px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: rgba(37, 99, 235, 0.15); /* Blue Glow */
+}
+.glow-2 {
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: rgba(30, 64, 175, 0.15); /* Darker Blue Glow */
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #cfcfcf !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.nav-link:hover {
+    color: #ffffff !important;
+}
+.brand-text {
+    color: #60A5FA; /* Light Blue Logo */
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Hero Typography */
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+@media (max-width: 768px) {
+    .hero-title { font-size: 3rem; }
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: #2563EB;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+.btn-primary-custom:hover {
+    background-color: #1d4ed8;
+}
+.btn-outline-custom {
+    background-color: transparent;
+    border: 1px solid #4B5563;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.btn-outline-custom:hover {
+    border-color: #60A5FA;
+    color: white;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(30, 41, 59, 0.4); /* Semi-transparent dark */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.glass-card:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 41, 59, 0.6);
+}
+
+/* Image Placeholders */
+.img-placeholder {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1);
+}
