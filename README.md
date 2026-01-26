@@ -1,4 +1,4 @@
-# CCAPDEV-LaBron: Lab Reservation System
+# CCAPDEV-LabKoTo: Lab Reservation System
 
 The following describes the features of a computer laboratory slot (seat) reservation web application. Groups must include at least three computer labs in the system. The minimum features required to be implemented for this project are as follows:
 
