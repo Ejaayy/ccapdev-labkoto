@@ -1,60 +1,40 @@
-# CCAPDEV-LabKoTo: Lab Reservation System
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-The following describes the features of a computer laboratory slot (seat) reservation web application. Groups must include at least three computer labs in the system. The minimum features required to be implemented for this project are as follows:
+## Getting Started
 
-## View Slot Availability
-  o A user may choose a computer lab and see the current available seats of the chosen lab. 
-    The user may opt to see the availability of the lab at other times for the next 7 days. 
-    A user must be a student user to reserve a seat.
-  o Note: Users may see who reserved a seat, as long as the reservee did not make the reservation anonymously. 
-    Clicking on a user’s name should link to that user’s profile. Availability must also update periodically so that the user does not need to refresh every time.
+First, run the development server:
 
-## Register
-  o A visitor must register if they want to reserve a lab slot. 
-    The visitor must enter their DLSU email and a password. 
-    There should be 2 kinds of accounts: the student who can reserve lab slots, and the lab technician that can block a time slot for walk-in students.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Login
-  o After registering properly, a visitor may log in. Upon logging in, the option to reserve a slot will be open. 
-    The user is given the option to be “remembered” by the website. When the user chooses this option, every login and visit to the website will extend their “remember” period by 3 weeks.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Logout
-  o The user may log out from their account. 
-    This should cut short the “remember” period if it exists and clear any session-related data.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Reserve
-  o Students can reserve slots that have not yet been taken. 
-    Lab slots are in intervals of 30 minutes. 
-    The student also has the option whether to reserve anonymously or not. 
-    The student can reserve more than one slot, and all the lab slots will be made under one reservation. 
-    A student may not reserve a previously reserved slot.
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-## Reserve for a student
-  o Lab technicians can make a reservation for walk-in students.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-## Remove reservation
-  o Lab technicians have the ability to remove reservations of students who do not show up within 10 minutes of the reservation. 
-    This facility is only available 10 minutes of the actual reservation time. This will cancel the whole reservation.
+This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Edit reservation
-  o A student can edit reservations they previously made.
-  o Lab technicians are able to edit any reservations.
+## Learn More
 
-## See reservations
-  o A user may check their reservations. 
-    They can see details such as the seat number, the laboratory, the date and time of request, and the date and time of reservation.
+To learn more about Next.js, take a look at the following resources:
 
-## View / Edit User profile
-  o Registered users may edit their own profile, which includes a profile picture and description. 
-    Additionally, the profile should also list the student’s current reservations.
-  o Users may also view another user’s public profile, but they are not able to edit it.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-## Delete User Account
-  o Students have the option to delete their own account, ultimately deleting their account and cancelling any pending reservations they may have.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Search for users / free slots
-  o Users can view all the available slots given a provided date and time, and the lab.
+## Deploy on Vercel
 
-## General
-  o Good user experience. Visitors can easily navigate without help, all information is easy to access. 
-    Good visual design. Design suits the theme of the application, and is cohesive and consistent across the whole application.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
