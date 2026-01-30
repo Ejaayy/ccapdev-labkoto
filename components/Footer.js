@@ -1,0 +1,21 @@
+import styles from '../styles/Landing.module.css';
+
+
+export default function Footer(){
+    return(
+        <footer className="py-4" style={{ height: '218px', backgroundColor: "#16141E", marginTop: "100px"}}>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6 mb-3 mb-md-0">
+              <a href="/" className={`${styles['brand-text']}`}>LabKoTo</a>
+              <div className="text-secondary">2026 All rights reserved</div>
+            </div>
+            <div className="col-md-6 text-md-end">
+              <a href="#" className="text-secondary text-decoration-none me-4 hover-white">Contact Us</a>
+              <a href="#" className="text-secondary text-decoration-none hover-white">Reserve</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    )
+}

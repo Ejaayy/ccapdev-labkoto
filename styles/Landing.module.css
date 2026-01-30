@@ -49,10 +49,20 @@ body {
     color: #ffffff !important;
 }
 .brand-text {
-    color: #60A5FA; /* Light Blue Logo */
+    background: var(--Brand-Theme, linear-gradient(90deg, #0BBFED 0%, #A6E6FF 9.62%, #2075FD 49.04%, #0BB9FF 84.62%));
+    
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+
     font-weight: 700;
     font-size: 1.5rem;
     text-decoration: none;
+
+    display: inline-block;
 }
 
 /* Hero Typography */
@@ -72,10 +82,11 @@ body {
 /* Buttons */
 .btn-primary-custom {
     background-color: #2563EB;
+    color:white;
     border: none;
     padding: 12px 30px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 17px;
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
 }
 .btn-primary-custom:hover {
@@ -83,11 +94,9 @@ body {
 }
 .btn-outline-custom {
     background-color: transparent;
-    border: 1px solid #4B5563;
     color: white;
     padding: 12px 30px;
     font-weight: 600;
-    border-radius: 8px;
 
     border-radius: 17px;
     border: 1px solid #10A7FE;
@@ -95,6 +104,7 @@ body {
 }
 .btn-outline-custom:hover {
     border-color: #60A5FA;
+    background-color: #0c205b;
     color: white;
 }
 
@@ -116,10 +126,6 @@ body {
 
 /* Image Placeholders */
 .img-placeholder {
-    width: 100px;
-    height: 100px;
+    height: 282px;
     margin-bottom: 1.5rem;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #e2e8f0, #94a3b8);
-    box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1);
 }
