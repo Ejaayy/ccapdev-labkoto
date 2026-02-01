@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import styles from '../styles/Landing.module.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import { useRouter } from 'next/router';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,13 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+
+  const router = useRouter();
+
+  const goToLogin = () => {
+    router.push('/auth/login');
+  }
+
   return (
     <>
       {/* Background Glows */}
@@ -36,7 +44,7 @@ export default function Home() {
               The most accessible Laboratories in DLSU
             </p>
             <div className="d-flex gap-3">
-              <button className={`${styles['btn-primary-custom']}`}>BOOK SEATS</button>
+              <button className={`${styles['btn-primary-custom']}`} onClick={goToLogin}>BOOK SEATS</button>
               <button className={`${styles['btn-outline-custom']}`}>EDIT BOOKING</button>
             </div>
           </div>
