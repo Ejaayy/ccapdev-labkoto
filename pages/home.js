@@ -1,5 +1,7 @@
-import HomeNavbar from "@/components/HomeNavbar";
+import HomeNavbar from "@/components/layout/HomeNavbar";
 import styles from "../styles/HomeNavbar.module.css";
+import SelectStudent from "@/components/home/SelectStudents";
+
 export default function home(){
 
     return(
@@ -46,7 +48,7 @@ export default function home(){
                         <div 
                         className={`row ${styles['right-container']}`} 
                         style={{height: "275px"}}>
-                            Select Students
+                            <SelectStudent />
                         </div>
                     </div>
                 </div>
