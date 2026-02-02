@@ -18,21 +18,29 @@ export default function Login(){
                      <img src="../../../laboratoryPhoto.png" style={{height: "100%", width: "100%"}}/>
 
                     <div className={`${loginStyles['form-container']}`}>
-                        <h1 style={{color: "#000000"}}>
-                        Login
-                     </h1>  
-                        <form action="/home">
-                        <label style={{color: "#000000"}}>Username</label>
+                        <h1>Login</h1>  
+                        <h3>Welcome back! Please login to your account</h3>
+
+                        <form className={loginStyles.labelSpacing} action="/home">
+                        <label className={loginStyles.textLabels} >Username</label>
                         <br/>
-                        <input type="text" id="username" />
+                        <input className={loginStyles.inputBox} type="text" id="username" />
                         <br/>
-                        <label style={{color: "#000000"}}>Password</label>
+                        <label className={`${loginStyles.textLabels} ${loginStyles.labelSpacing}`}>Password</label>
                         <br/>
-                        <input type="text" id="password" />
+                        <input className={loginStyles.inputBox} type="text" id="password" />
                         <br/>
-                        <label style={{color: "#000000"}}>Forgot Password</label>
-                        <br/>
-                        <input type="submit" value="Log In"></input>
+                       
+                        <div className={loginStyles.subModule}>
+                            <label className={loginStyles.textLabels} >Forgot Password?</label>
+                            <br/>
+                            <input className={loginStyles.confirmButton} type="submit" value="Log In"></input>
+                            <br/>
+                            <label className={`${loginStyles.textLabels} ${loginStyles.newUser}`} >New User? 
+                            <a className={loginStyles.userSignUp}> Sign Up</a>
+                            </label>
+                        </div>
+                        
                    </form>
                     </div>
                
