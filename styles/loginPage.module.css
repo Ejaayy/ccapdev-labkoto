@@ -96,3 +96,78 @@
     text-decoration: none;
 }
 
+.signUpModal{
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signUpModal h1{
+    margin-top: 35px;
+    margin-bottom: 0px;
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px; 
+}
+
+.signUpModal h6{
+    overflow: hidden;
+    color:  #62748E;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:  20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:28px;
+    letter-spacing:  0;
+}
+
+.roleSelector{
+    margin-top: 100px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backButtonContainer{
+    width: 100%
+}
+
+.backButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.backButton {
+    margin-left: 16px;
+    color: #c2bfbf;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s;
+    padding: 0;
+    line-height: 1;
+}
+.backButton:hover, .backButton:focus {
+    color: #07C1FF;
+}
+
+
+
