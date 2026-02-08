@@ -1,0 +1,89 @@
+.calendarCard {
+    background: transparent; 
+    border: none;
+    padding: 24px;
+    width: 100%;
+    max-width: 340px;
+    color: #000000;
+    font-family: inherit; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.selectGroup select {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 0 4px;
+    background: #ffffff; 
+    color: #000000;      
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.navBtn {
+    background: none;
+    border: none; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.navBtn:hover {
+    opacity: 0.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
+}
+
+.weekday {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666666;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+
+.day {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 10px;
+    color: #000000;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.day:hover:not(.empty) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.reserved {
+  background-color: #22c55e !important; 
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.empty {
+  cursor: default;
+  opacity: 0;
+}
