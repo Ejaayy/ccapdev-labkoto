@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../styles/Calendar.module.css';
+import { useState } from "react";
+import styles from "@/styles/Calendar.module.css";
 
 const CustomCalendar = ({ reservedDates = [] }) => {
     const daysInMonth = 28;

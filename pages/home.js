@@ -2,6 +2,8 @@ import HomeNavbar from "@/components/layout/HomeNavbar";
 import styles from "../styles/HomeNavbar.module.css";
 import SelectStudent from "@/components/home/SelectStudents";
 import CustomCalendar from "@/components/home/CustomCalendar";
+import Announcements from "@/components/home/Announcements";
+import WelcomeUser from "@/components/home/WelcomeUser";
 
 export default function home(){
     const myReservations = ["2026-02-09", "2026-02-06", "2026-02-07"];
@@ -21,18 +23,22 @@ export default function home(){
                         className={`row ${styles['left-container']}`} 
                         style={{
                             height: "320px",
+                            width: "400px",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            margin: "0"
+                            margin: "10px 0 0 -10px"
                             }}
                         >
                             <CustomCalendar reservedDates={myReservations} />
                         </div>
 
                         <div className={`row ${styles['left-container']}`}
-                        style={{flex: 1}}>
-                            Announcements
+                        style={{
+                            flex: 1
+                            }}
+                        >
+                            <Announcements />
                         </div>
                     </div>
 
@@ -41,7 +47,7 @@ export default function home(){
                         <div 
                         className={`row ${styles['right-container']}`} 
                         style={{height: "100px"}}>
-                            Welcome User
+                            <WelcomeUser />
                         </div>
 
                         <div 

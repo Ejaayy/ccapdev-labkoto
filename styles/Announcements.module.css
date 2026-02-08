@@ -1,0 +1,84 @@
+.announcementsWrapper {
+    display: flex;
+    flex-direction: column; 
+    height: 100%;           
+}
+
+.labelContainer {
+    padding-left: 8px; 
+}
+
+.containerName {
+    font-weight: bold;
+}
+
+.menuContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;   
+    width: 100%;
+    padding: 8px;
+    background: transparent; 
+    color: #000000; 
+}
+
+.separator {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #000000; 
+    margin: 3px 0;
+    opacity: 0.2;
+}
+
+.menuItem {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 9px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.menuItem:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contentStack {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0; 
+    gap: 4px;
+}
+
+.labelRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.shortcut {
+    font-size: 12px;
+    color: #666;
+    font-family: monospace;
+}
+
+.description {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
