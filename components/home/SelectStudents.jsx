@@ -1,43 +1,40 @@
 import { useState } from "react";
+import styles from '@/styles/SelectStudents.module.css';
 
-const studentsData = [
-  { id: 1, name: "Juan Dela Cruz" },
-  { id: 2, name: "Maria Santos" },
-  { id: 3, name: "Pedro Reyes" },
-  { id: 4, name: "Ana Lopez" },
- 
+const students = [
+  { id: 1, name: "Waba Laba D. DubDub" },
+  { id: 2, name: "Waba Laba D. DubDub" },
+  { id: 3, name: "Waba Laba D. DubDub" },
+  { id: 4, name: "Waba Laba D. DubDub" },
+  { id: 5, name: "Waba Laba D. DubDub" },
 ];
 
-export default function SelectStudent() {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  // Filter students based on search term
-  const filteredStudents = studentsData.filter((student) =>
-    student.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+const SelectStudent = () => {
   return (
-    <div className="p-4 w-full max-w-md mx-auto">
-      <h2 className="text-lg font-bold mb-2">Search Student</h2>
-      <input
-        type="text"
-        placeholder="Enter student name..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full p-2 border rounded mb-4"
-      />
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Select Student</h2>
+        <div className={styles.searchBar}>search bar</div>
+      </div>
 
-      <ul>
-        {filteredStudents.length > 0 ? (
-          filteredStudents.map((student) => (
-            <li key={student.id} className="p-2 border-b">
-              {student.name}
-            </li>
-          ))
-        ) : (
-          <li className="p-2 text-gray-500">No students found</li>
-        )}
-      </ul>
+      <div className={styles.carouselWrapper}>
+        <button className={styles.arrowBtn}>&#10094;</button>
+        
+        <div className={styles.studentList}>
+          {students.map((student) => (
+            <div key={student.id} className={styles.studentCard}>
+              <div className={styles.avatarPlaceholder}>
+                 <div className={styles.userIcon}></div>
+              </div>
+              <p className={styles.studentName}>{student.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <button className={styles.arrowBtn}>&#10095;</button>
+      </div>
     </div>
   );
-}
+};
+
+export default SelectStudent;

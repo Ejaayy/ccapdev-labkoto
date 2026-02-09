@@ -5,7 +5,7 @@ const WelcomeUser = () => {
         <div className={styles.welcomeWrapper}>
             <div className={styles.profileContainer}>
                 <div className={styles.profileCircle}>
-                    <img src="" alt="Profile" className={styles.profilePicture} />
+                    <img src="profilePic.jpg" alt="Profile" className={styles.profilePicture} />
                 </div>
             </div>
             <div className={styles.analyticsContainer}>
@@ -15,21 +15,21 @@ const WelcomeUser = () => {
                 </div>
 
                 <div className={styles.analyticsItem}>
-                    <img src="" alt="Rooms" className={styles.analyticsIcon} />
+                    <img src="/room.png" alt="Rooms" className={styles.analyticsIcon} />
                     <span className={styles.analyticsLabel}>Rooms Available:</span>
                     <span className={styles.analyticsValue}>8</span>
                 </div>
 
                 <div className={styles.analyticsItem}>
-                    <img src="" alt="Seats" className={styles.analyticsIcon} />
+                    <img src="/seat.png" alt="Seats" className={styles.analyticsIcon} />
                     <span className={styles.analyticsLabel}>Seats Available:</span>
                     <span className={styles.analyticsValue}>12</span>
                 </div>
 
                 <div className={styles.analyticsItem}>
-                    <img src="" alt="Upcoming Reservations" className={styles.analyticsIcon} />
+                    <img src="/upcoming.png" alt="Upcoming Reservations" className={styles.analyticsIcon} />
                     <span className={styles.analyticsLabel}>Upcoming Reservations:</span>
-                    <span className={styles.analyticsValue}>3</span>
+                    <span className={styles.analyticsValue}>4</span>
                 </div>
             </div>
         </div>
