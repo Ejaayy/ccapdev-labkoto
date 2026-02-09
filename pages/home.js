@@ -19,23 +19,13 @@ export default function home(){
                 <div className="row">
                     <div className="col-4 d-flex flex-column gap-3">
                         
-                        <div 
-                        className={`row ${styles['left-container']}`} 
-                        style={{
-                            height: "320px",
-                            width: "400px",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            margin: "10px 0 0 -10px"
-                            }}
-                        >
+                        <div className={`row ${styles['left-container-CustomCalendar']}`} >
                             <CustomCalendar reservedDates={myReservations} />
                         </div>
 
-                        <div className={`row ${styles['left-container']}`}
+                        <div className={`row ${styles['left-container-Announcements']}`}
                         style={{
-                            flex: 1
+                            flex: 1,
                             }}
                         >
                             <Announcements />
