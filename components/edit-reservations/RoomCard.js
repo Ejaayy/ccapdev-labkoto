@@ -1,0 +1,23 @@
+import Slot from "./Slot";
+import styles from "@/styles/Edit-reservations.module.css";
+
+export default function RoomCard({ room, onSlotClick }) {
+  return (
+    <div className={styles.roomCard}>
+      <div className={styles.roomHeader}>
+        <div className={styles.roomName}>{room.name}</div>
+        <div className={styles.capacity}>Capacity: {room.capacity}</div>
+      </div>
+      <div className={styles.slots}>
+        {room.slots.map((slot, i) => (
+          <Slot
+            key={i}
+            time={slot.time}
+            status={slot.status}
+            onClick={() => onSlotClick(room, slot)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

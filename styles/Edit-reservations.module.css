@@ -1,0 +1,122 @@
+/* Reservations.module.css */
+
+.container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  height: calc(100vh - 70px);
+}
+
+.topBar {
+  background: #ffffff;
+  padding: 16px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.topBar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.schedule {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.roomCard {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.roomName {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.capacity {
+  font-size: 13px;
+  color: #666;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.slot {
+  padding: 10px 6px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.available {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.almostFull {
+  background: #fff4e5;
+  color: #b26a00;
+}
+
+.full {
+  background: #fdecea;
+  color: #a50e0e;
+}
+
+.panel {
+  background: #ffffff;
+  border-left: 1px solid #ddd;
+  padding: 24px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.panelSection {
+  margin-bottom: 20px;
+}
+
+.panelLabel {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.student {
+  background: #f1f3f4;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.addBtn {
+  display: block;
+  margin-top: 12px;
+  padding: 10px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
