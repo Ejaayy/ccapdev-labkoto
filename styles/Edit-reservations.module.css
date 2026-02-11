@@ -1,37 +1,37 @@
-/* Reservations.module.css */
-
+/* Containers */
 .container {
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   height: calc(100vh - 70px);
+  gap: 20px;
+  padding: 20px;
 }
 
+/* TopBar */
 .topBar {
-  background: #ffffff;
+  background: #1F2234;
   padding: 16px 24px;
   display: flex;
   gap: 16px;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #1E293B;
 }
 
 .topBar input {
   padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #242738;
+  color: white;
 }
 
-.schedule {
-  padding: 24px;
-  overflow-y: auto;
-}
-
+/* Room Cards */
 .roomCard {
-  background: #ffffff;
+  background: #1F2234;
   border-radius: 10px;
   padding: 16px;
   margin-bottom: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .roomHeader {
@@ -43,13 +43,15 @@
 .roomName {
   font-weight: 600;
   font-size: 16px;
+  color: white;
 }
 
 .capacity {
   font-size: 13px;
-  color: #666;
+  color: #94A3B8;
 }
 
+/* Slots */
 .slots {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -59,36 +61,36 @@
 .slot {
   padding: 10px 6px;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .available {
-  background: #e6f4ea;
-  color: #137333;
+  background: #0F172A;
+  color: #37c7e1;
 }
 
 .almostFull {
-  background: #fff4e5;
-  color: #b26a00;
+  background: #1e293b;
+  color: #FACC15;
 }
 
 .full {
-  background: #fdecea;
-  color: #a50e0e;
+  background: #1F1A2A;
+  color: #F87171;
 }
 
+/* Panel */
 .panel {
-  background: #ffffff;
-  border-left: 1px solid #ddd;
+  background: #1F2234;
+  border-left: 1px solid #1E293B;
   padding: 24px;
-}
-
-.panel h3 {
-  margin-top: 0;
-  font-size: 18px;
+  border-radius: 10px;
+  overflow-y: auto;
+  color: white;
 }
 
 .panelSection {
@@ -97,26 +99,49 @@
 
 .panelLabel {
   font-size: 13px;
-  color: #666;
+  color: #94A3B8;
   margin-bottom: 6px;
 }
 
-.student {
-  background: #f1f3f4;
+/* Students */
+.studentItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #242738;
   padding: 8px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 6px;
-  font-size: 14px;
+}
+
+.addStudentInput {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  margin-bottom: 8px;
+  background: #242738;
+  color: white;
+}
+
+.addBtn, .removeBtn {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 .addBtn {
-  display: block;
-  margin-top: 12px;
-  padding: 10px;
-  background: #1a73e8;
+  background: #3B82F6;
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
   width: 100%;
+}
+
+.addBtn:hover {
+  background: #2563eb;
+}
+
+.removeBtn {
+  background: #F87171;
+  color: white;
 }

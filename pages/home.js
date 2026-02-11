@@ -8,7 +8,7 @@ import WelcomeUser from "@/components/home/WelcomeUser";
 import UpcomingReservations from "@/components/home/UpcomingReservations";
 import SelectStudents from "@/components/home/SelectStudents";
 
-export default function home(){
+export default function Home(){
     const myReservations = ["2026-02-06", "2026-02-07", "2026-02-09", "2026-02-14"];
     const reservationData = [
         {
