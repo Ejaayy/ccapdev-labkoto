@@ -28,7 +28,7 @@ export default function HomeNavbar({ style, className, ...rest }) {
         <Link href="/home" className={styles['brand-text']}>
           LabKoTo
         </Link>
-]
+
         <button
           className="navbar-toggler navbar-dark border-0"
           type="button"
