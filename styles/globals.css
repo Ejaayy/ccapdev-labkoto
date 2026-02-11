@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+.mainBgColor{
+  background-color: rgba(36, 39, 56, 0.8);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
