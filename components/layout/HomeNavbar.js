@@ -11,7 +11,6 @@ export default function HomeNavbar({ style, className, ...rest }) {
     setIsOpen(!isOpen);
   };
 
-  // Check if the current path matches the link
   const isActive = (path) => {
     if (path === '/') {
       return router.pathname === '/' || router.pathname === '/home';
@@ -26,12 +25,10 @@ export default function HomeNavbar({ style, className, ...rest }) {
       className={`navbar navbar-expand-md py-4 ${styles.homeNavbar} ${className || ''}`}
     >
       <div className="container">
-        {/* Brand */}
         <Link href="/home" className={styles['brand-text']}>
           LabKoTo
         </Link>
-
-        {/* Toggler for mobile */}
+]
         <button
           className="navbar-toggler navbar-dark border-0"
           type="button"
@@ -49,8 +46,8 @@ export default function HomeNavbar({ style, className, ...rest }) {
           <ul className="navbar-nav ms-auto gap-4">
             <li className="nav-item">
               <Link 
-                href="/" 
-                className={`text-decoration-none ${styles.navLink} ${isActive('/') ? styles.activeNavLink : ''}`}
+                href="/home"
+                className={`text-decoration-none ${styles.navLink} ${isActive('/home') ? styles.activeNavLink : ''}`}
               >
                 Home
               </Link>

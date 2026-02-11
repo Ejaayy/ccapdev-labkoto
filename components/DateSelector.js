@@ -4,7 +4,7 @@ const DATES = [
   { day: 'Sun', date: '08 Feb', labs: 0 },
   { day: 'Mon', date: '09 Feb', labs: 0 },
   { day: 'Tue', date: '10 Feb', labs: 0 },
-  { day: 'Wed', date: '11 Feb', labs: 5 }, // The selected date
+  { day: 'Wed', date: '11 Feb', labs: 5 },
   { day: 'Thu', date: '12 Feb', labs: 8 },
   { day: 'Fri', date: '13 Feb', labs: 5 },
   { day: 'Sat', date: '14 Feb', labs: 10 },

@@ -26,8 +26,6 @@ export default function ReservePage(){
                             
                             <div className={`${ReserveStyles['selection-panel']}`}>
 
-
-                                {/*Step 1*/}
                                 {currentStep == 1 && (
                                 
                                 <div>
@@ -37,14 +35,12 @@ export default function ReservePage(){
                                 </div>
                                 )}
 
-                                {/*Step 2 */}
                                 {currentStep == 2 &&(
                                     <div>
                                         <SeatSelector/>
                                     </div>
                                 )}
 
-                                {/*Step 3 - Reservation Summary*/}
                                 {currentStep == 3 &&(
                                     <div className={ReserveStyles.summaryContainer}>
                                         <h1>Reservation Summary</h1>

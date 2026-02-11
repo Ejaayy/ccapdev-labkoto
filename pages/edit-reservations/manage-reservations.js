@@ -266,7 +266,6 @@ export default function Dashboard() {
         alt="Laboratory"
       />
 
-      {/* Overlay content on top of background */}
       <div
         style={{
           position: "absolute",

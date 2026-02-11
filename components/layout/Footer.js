@@ -7,7 +7,7 @@ export default function Footer(){
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 mb-3 mb-md-0">
-              <a href="/" className={`${styles['brand-text']}`}>LabKoTo</a>
+              <Link href="/" className={`${styles['brand-text']}`}>LabKoTo</Link>
               <div className="text-secondary">2026 All rights reserved</div>
             </div>
             <div className="col-md-6 text-md-end">

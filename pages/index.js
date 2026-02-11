@@ -25,14 +25,11 @@ export default function Home() {
 
   return (
     <>
-      {/* Background Glows */}
       <div className={`${styles['glow-bg']} ${styles['glow-1']}`}></div>
       <div className={`${styles['glow-bg']} ${styles['glow-2']}`}></div>
 
-      {/* Navbar */}
       <Navbar/>
 
-      {/* Hero Section */}
       <section className="container mt-5 pb-5" style={{ marginBottom: '150px' }}>
         <div className="row">
           <div className="col-lg-7">
@@ -51,7 +48,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="container pb-5 mb-6">
         <div className="row g-4">
           <div className="col-md-4">
@@ -78,7 +74,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Us Section */}
       <section id="about" className={`container py-5 ${styles.aboutSection}`}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>About Us</h2>
@@ -122,7 +117,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className={`py-5 ${styles.contactSection}`}>
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -195,7 +189,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer/>
     </>
   );
