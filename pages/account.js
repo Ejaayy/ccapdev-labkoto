@@ -1,5 +1,5 @@
 import HomeNavbar from "@/components/layout/HomeNavbar";
-import AccountCss from "@/styles/AccountPage.module.css"
+import AccountStyles from "@/styles/AccountPage.module.css"
 
 export default function Account(){
     return (
@@ -8,13 +8,13 @@ export default function Account(){
 
             <img src="../../laboratoryPhoto.png" style={{height: "100vh", width: "100%"}}/>
 
-            <div className={`${AccountCss['main-panel']}`}>
-                <div className={`${AccountCss['sub-panel']}`}>
+            <div className={`${AccountStyles['main-panel']}`}>
+                <div className={`${AccountStyles['sub-panel']}`}>
                     Hello1
 
                 </div>
 
-                <div className={`${AccountCss['sub-panel']}`}>
+                <div className={`${AccountStyles['sub-panel']}`}>
                     Hello2
                 </div>
             </div>

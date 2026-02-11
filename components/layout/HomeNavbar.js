@@ -22,8 +22,8 @@ export default function HomeNavbar() {
 
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto gap-4">
-                            <li className="nav-item"><a href="#">home</a></li>
-                            <li className="nav-item"><a href="#">reserve</a></li>
+                            <li className="nav-item"><a className="text-white text-decoration-none" href="/">home</a></li>
+                            <li className="nav-item"><a className="text-white text-decoration-none" href="/reserve">reserve</a></li>
 
                             <li className="nav-item dropdown">
                                 <button
