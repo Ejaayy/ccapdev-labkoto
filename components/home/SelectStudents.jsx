@@ -14,7 +14,10 @@ const SelectStudent = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Select Student</h2>
-        <div className={styles.searchBar}>search bar</div>
+        <div className={styles.searchBar}>
+          <span role="img" aria-hidden="true">🔍</span>
+          <span>Search student...</span>
+        </div>
       </div>
 
       <div className={styles.carouselWrapper}>

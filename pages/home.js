@@ -56,51 +56,34 @@ export default function home(){
     };
 
     return(
-        <div style={{backgroundColor: "#242738", position: "relative"}}>
-
+        <div className={styles.homePage}>
             <HomeNavbar/>
-            <img src="../../laboratoryPhoto.png" style={{height: "100vh", width: "100%"}}/>
 
-            <div className={`container ${styles['main-panel']}`}>
-
-                <div className="row">
-                    <div className="col-4 d-flex flex-column gap-3">
-                        
-                        <div className={`row ${styles['left-container-CustomCalendar']}`} >
-                            <CustomCalendar reservedDates={myReservations} />
-                        </div>
-
-                        <div className={`row ${styles['left-container-Announcements']}`}
-                        style={{
-                            flex: 1,
-                            }}
-                        >
-                            <Announcements />
-                        </div>
+            <div className={styles['main-panel']}>
+                <div>
+                    <div className={styles['left-container-CustomCalendar']}>
+                        <CustomCalendar reservedDates={myReservations} />
                     </div>
 
-                    <div className="col-8">
-                        <div 
-                        className={`row ${styles['right-container']}`} 
-                        style={{height: "100px"}}>
-                            <WelcomeUser />
-                        </div>
-
-                        <div 
-                            className={`row ${styles['right-container']}`} 
-                            style={{height: "275px", padding: "15px", display: "flex", flexDirection: "column"}}>
-                            <h3 style={{fontSize: '1.1rem', marginBottom: '10px'}}>Upcoming Reservations</h3>
-                            <UpcomingReservations reservations={reservationsState} handleCheck={handleCheck}/>
-                        </div>
-
-                        <div 
-                        className={`row ${styles['right-container']}`} 
-                        style={{height: "290px"}}>
-                            <SelectStudents />
-                        </div>
+                    <div className={styles['left-container-Announcements']}>
+                        <Announcements />
                     </div>
                 </div>
-              
+
+                <div>
+                    <div className={styles['right-container']}>
+                        <WelcomeUser />
+                    </div>
+
+                    <div className={styles['right-container']}>
+                        <h4 style={{ margin: 0, fontSize: '0.95rem' }}>Current Reservations</h4>
+                        <UpcomingReservations reservations={reservationsState} handleCheck={handleCheck}/>
+                    </div>
+
+                    <div className={styles['right-container']}>
+                        <SelectStudents />
+                    </div>
+                </div>
             </div>
         </div>
     )

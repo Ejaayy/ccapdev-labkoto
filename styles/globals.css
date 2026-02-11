@@ -1,6 +1,17 @@
 :root {
+  /* Global app colors */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Home dashboard palette */
+  --bg-body: #f8fafc;
+  --navbar-blue: #1e3a8a;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent-green: #25283a;
+  --accent-blue: #3b82f6;
+  --border-light: #e2e8f0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +27,7 @@ body {
   overflow-x: hidden;
 }
 
-.mainBgColor{
+.mainBgColor {
   background-color: rgba(36, 39, 56, 0.8);
 }
 

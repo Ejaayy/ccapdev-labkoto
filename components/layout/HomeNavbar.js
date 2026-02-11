@@ -10,11 +10,9 @@ export default function HomeNavbar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-md py-4"
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", backgroundColor: "#242738", zIndex: 100 }}
-            >
+            <nav className={`navbar navbar-expand-md py-4 ${styles.homeNavbar}`}>
                 <div className="container">
-                    <a href="/home" className={`${styles['brand-text']}`}>LabKoTo</a>
+                    <a href="/home" className={styles['brand-text']}>LabKoTo</a>
 
                     <button className="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span className="navbar-toggler-icon"></span>
@@ -22,9 +20,10 @@ export default function HomeNavbar() {
 
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto gap-4">
-                            <li className="nav-item"><a className="text-white text-decoration-none" href="/">home</a></li>
-                            <li className="nav-item"><a className="text-white text-decoration-none" href="/reserve">reserve</a></li>
-
+                            <li className="nav-item"><a className="text-white text-decoration-none" href="/">Home</a></li>
+                            <li className="nav-item"><a className="text-white text-decoration-none" href="/reserve">Reserve</a></li>
+                            <li className="nav-item"><a className="text-white text-decoration-none" href="/edit-reservations/manage-reservations">Manage Reservations</a></li>
+                            <li className="nav-item"><a className="text-white text-decoration-none" href="/reserve">Edit Reservations</a></li>
                             <li className="nav-item dropdown">
                                 <button
                                     className="nav-link dropdown-toggle btn btn-link text-white border-0 p-0"
