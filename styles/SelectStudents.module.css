@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.searchBar {
+  position: absolute;
+  right: 0;
+  background: #e0e0e0;
+  padding: 8px 20px;
+  border-radius: 4px;
+  color: #333;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.studentList {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* Or 'auto' for mobile scroll */
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.studentCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.avatarPlaceholder {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.studentName {
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.arrowBtn {
+  background: #e0e0e0;
+  border: none;
+  font-size: 2rem;
+  padding: 20px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
