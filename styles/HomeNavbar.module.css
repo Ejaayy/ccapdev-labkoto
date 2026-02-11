@@ -90,3 +90,35 @@
     font-size: 1.05rem;
     font-weight: 600;
 }
+
+/* Nav Link Styles */
+.navLink {
+    color: #94a3b8;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.navLink:hover {
+    color: #ffffff;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.activeNavLink {
+    color: #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.15);
+}
+
+.activeNavLink::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #0BBFED, #2075FD);
+    border-radius: 2px;
+}

@@ -98,6 +98,24 @@
   font-weight: 600;
   color: var(--text-main);
   line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.viewProfileLink {
+  font-size: 0.6rem;
+  color: var(--accent-blue, #3B82F6);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.studentCard:hover .viewProfileLink {
+  opacity: 1;
+}
+
+.viewProfileLink:hover {
+  text-decoration: underline;
 }
 
 .arrowBtn {

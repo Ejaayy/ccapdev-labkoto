@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from '@/styles/SelectStudents.module.css';
+import Link from 'next/link';
 
 const students = [
   { id: 1, name: "Waba Laba D. DubDub" },
@@ -30,6 +31,9 @@ const SelectStudent = () => {
                  <div className={styles.userIcon}></div>
               </div>
               <p className={styles.studentName}>{student.name}</p>
+              <Link href="/account" className={styles.viewProfileLink}>
+                View Profile
+              </Link>
             </div>
           ))}
         </div>

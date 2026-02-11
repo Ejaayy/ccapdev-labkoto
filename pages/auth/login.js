@@ -174,12 +174,18 @@ export default function Login(){
                         <br/>
                         <label className={`${loginStyles.textLabels} ${loginStyles.labelSpacing}`}>Password</label>
                         <br/>
-                        <input className={loginStyles.inputBox} type="text" id="password" />
+                        <input className={loginStyles.inputBox} type="password" id="password" />
                         <br/>
+                        
+                        <div className={loginStyles.rememberMeRow}>
+                            <label className={loginStyles.rememberMeLabel}>
+                                <input type="checkbox" className={loginStyles.rememberMeCheckbox} />
+                                Remember Me
+                            </label>
+                            <label className={loginStyles.forgotPassword}>Forgot Password?</label>
+                        </div>
                        
                         <div className={loginStyles.subModule}>
-                            <label className={loginStyles.textLabels} >Forgot Password?</label>
-                            <br/>
                             <input className={loginStyles.confirmButton} type="submit" value="Log In"></input>
                             <br/>
                             <label className={`${loginStyles.textLabels} ${loginStyles.newUser}`} >New User? 

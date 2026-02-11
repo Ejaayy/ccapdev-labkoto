@@ -7,22 +7,95 @@
   padding: 20px;
 }
 
+.schedule {
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* No Results */
+.noResults {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: #1F2234;
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
 /* TopBar */
 .topBar {
   background: #1F2234;
-  padding: 16px 24px;
+  padding: 20px 24px;
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #1E293B;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.topBar input {
-  padding: 8px 12px;
+.topBarTitle h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.topBarTitle p {
+  margin: 4px 0 0 0;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.topBarFilters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  background: #242738;
   border: 1px solid #334155;
   border-radius: 8px;
-  background: #242738;
+  padding: 0 12px;
+  transition: border-color 0.2s ease;
+}
+
+.filterGroup:focus-within {
+  border-color: #3b82f6;
+}
+
+.filterIcon {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.dateInput,
+.searchInput {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
   color: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.dateInput {
+  width: 150px;
+}
+
+.searchInput {
+  width: 200px;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
 }
 
 /* Room Cards */
@@ -144,4 +217,143 @@
 .removeBtn {
   background: #F87171;
   color: white;
+}
+
+/* Blocked Slot */
+.blocked {
+  background: #374151;
+  color: #9ca3af;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* Block/Unblock Buttons */
+.blockBtn {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #dc2626;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.blockBtn:hover {
+  background: #b91c1c;
+}
+
+.unblockBtn {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #22c55e;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.unblockBtn:hover {
+  background: #16a34a;
+}
+
+.blockHint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.blockedStatus {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.openStatus {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* Student Info Display */
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.studentNameText {
+  font-weight: 600;
+  color: white;
+}
+
+.studentSeatText {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.studentActions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Edit Student Form */
+.editStudentForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editInput {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.editBtnGroup {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.saveBtn, .cancelBtn, .editStudentBtn {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.saveBtn {
+  background: #22c55e;
+  color: white;
+}
+
+.saveBtn:hover {
+  background: #16a34a;
+}
+
+.cancelBtn {
+  background: #6b7280;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background: #4b5563;
+}
+
+.editStudentBtn {
+  background: #3b82f6;
+  color: white;
+}
+
+.editStudentBtn:hover {
+  background: #2563eb;
 }

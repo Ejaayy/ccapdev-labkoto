@@ -15,9 +15,15 @@
 }
 
 .reservationList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .reservationList {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Reservation Card */
@@ -59,9 +65,14 @@
   color: #0f172a;
 }
 
+.failed {
+  background-color: #f87171;
+  color: #ffffff;
+}
+
 .pending {
-  background-color: #facc15;
-  color: #1e1e2a;
+  background-color: #fbbf24;
+  color: #0f172a;
 }
 
 /* Card Body */
@@ -102,8 +113,8 @@
   justify-content: flex-end;
 }
 
-.cancelBtn {
-  background-color: #f87171;
+.editBtn {
+  background-color: #3B82F6;
   color: white;
   padding: 8px 16px;
   border: none;
@@ -113,6 +124,6 @@
   transition: all 0.2s ease;
 }
 
-.cancelBtn:hover {
-  background-color: #dc2626;
+.editBtn:hover {
+  background-color: #2563eb;
 }

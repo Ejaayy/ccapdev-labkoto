@@ -1,13 +1,15 @@
 import styles from '@/styles/WelcomeUser.module.css';
+import Link from 'next/link';
 
 const WelcomeUser = () => {
     return(
         <div className={styles.welcomeWrapper}>
-            <div className={styles.profileContainer}>
+            <Link href="/account" className={styles.profileContainer}>
                 <div className={styles.profileCircle}>
                     <img src="profilePic.jpg" alt="Profile" className={styles.profilePicture} />
                 </div>
-            </div>
+                <span className={styles.profileHint}>View Profile</span>
+            </Link>
             <div className={styles.analyticsContainer}>
                 <div className={styles.messageContainer}>
                     <span className={styles.big}>Hi Mr. Paingan,</span>

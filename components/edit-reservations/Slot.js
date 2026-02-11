@@ -1,7 +1,11 @@
-export default function Slot({ time, status, onClick }) {
+import styles from "@/styles/Edit-reservations.module.css";
+
+export default function Slot({ time, status, isBlocked, onClick }) {
   let className = styles.slot;
 
-  if (status === "available") {
+  if (isBlocked || status === "blocked") {
+    className += ` ${styles.blocked}`;
+  } else if (status === "available") {
     className += ` ${styles.available}`;
   } else if (status === "almost-full") {
     className += ` ${styles.almostFull}`;
@@ -11,8 +15,7 @@ export default function Slot({ time, status, onClick }) {
 
   return (
     <div className={className} onClick={onClick}>
-      {time}
+      {isBlocked || status === "blocked" ? "🚫 " : ""}{time}
     </div>
   );
 }
-import styles from "@/styles/Edit-reservations.module.css";

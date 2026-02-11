@@ -10,43 +10,240 @@ export default function Dashboard() {
   const [search, setSearch] = useState("");
   const [selectedSlot, setSelectedSlot] = useState(null);
 
-  const rooms = [
+  const [rooms, setRooms] = useState([
     {
       name: "Room A",
       capacity: 30,
       slots: [
-        { time: "08–09", status: "available", students: ["Juan Dela Cruz"] },
-        { time: "09–10", status: "full", students: ["Maria Santos"] },
-        { time: "10–11", status: "almost-full", students: ["Alex Lim"] },
-        { time: "11–12", status: "available", students: [] },
-        { time: "12–13", status: "available", students: [] },
-        { time: "13–14", status: "full", students: ["Sample Student"] },
+        { time: "08–09", status: "available", students: [{ name: "Juan Dela Cruz", seat: "A-01" }], isBlocked: false },
+        { time: "09–10", status: "full", students: [{ name: "Maria Santos", seat: "A-02" }], isBlocked: false },
+        { time: "10–11", status: "almost-full", students: [{ name: "Alex Lim", seat: "A-03" }], isBlocked: false },
+        { time: "11–12", status: "available", students: [], isBlocked: false },
+        { time: "12–13", status: "available", students: [], isBlocked: false },
+        { time: "13–14", status: "full", students: [{ name: "Sample Student", seat: "A-04" }], isBlocked: false },
       ],
     },
     {
       name: "Room B",
       capacity: 20,
       slots: [
-        { time: "08–09", status: "full", students: ["Juan Dela Cruz"] },
-        { time: "09–10", status: "full", students: ["Maria Santos"] },
-        { time: "10–11", status: "available", students: [] },
-        { time: "11–12", status: "available", students: [] },
-        { time: "12–13", status: "almost-full", students: ["Alex Lim"] },
-        { time: "13–14", status: "available", students: [] },
+        { time: "08–09", status: "full", students: [{ name: "Juan Dela Cruz", seat: "B-01" }], isBlocked: false },
+        { time: "09–10", status: "full", students: [{ name: "Maria Santos", seat: "B-02" }], isBlocked: false },
+        { time: "10–11", status: "available", students: [], isBlocked: false },
+        { time: "11–12", status: "available", students: [], isBlocked: false },
+        { time: "12–13", status: "almost-full", students: [{ name: "Alex Lim", seat: "B-03" }], isBlocked: false },
+        { time: "13–14", status: "available", students: [], isBlocked: false },
       ],
     },
-  ];
+    {
+      name: "Room C",
+      capacity: 25,
+      slots: [
+        { time: "08–09", status: "available", students: [], isBlocked: false },
+        { time: "09–10", status: "almost-full", students: [{ name: "Ana Garcia", seat: "C-01" }], isBlocked: false },
+        { time: "10–11", status: "full", students: [{ name: "Pedro Reyes", seat: "C-02" }, { name: "Sofia Cruz", seat: "C-03" }], isBlocked: false },
+        { time: "11–12", status: "available", students: [], isBlocked: false },
+        { time: "12–13", status: "full", students: [{ name: "Carlos Mendoza", seat: "C-04" }], isBlocked: false },
+        { time: "13–14", status: "available", students: [], isBlocked: false },
+      ],
+    },
+    {
+      name: "Room D",
+      capacity: 35,
+      slots: [
+        { time: "08–09", status: "almost-full", students: [{ name: "Elena Ramos", seat: "D-01" }], isBlocked: false },
+        { time: "09–10", status: "available", students: [], isBlocked: false },
+        { time: "10–11", status: "available", students: [], isBlocked: false },
+        { time: "11–12", status: "full", students: [{ name: "Miguel Torres", seat: "D-02" }], isBlocked: false },
+        { time: "12–13", status: "available", students: [], isBlocked: false },
+        { time: "13–14", status: "almost-full", students: [{ name: "Isabella Fernandez", seat: "D-03" }], isBlocked: false },
+      ],
+    },
+    {
+      name: "Room E",
+      capacity: 40,
+      slots: [
+        { time: "08–09", status: "full", students: [{ name: "David Martinez", seat: "E-01" }, { name: "Laura Gonzales", seat: "E-02" }], isBlocked: false },
+        { time: "09–10", status: "available", students: [], isBlocked: false },
+        { time: "10–11", status: "almost-full", students: [{ name: "Roberto Silva", seat: "E-03" }], isBlocked: false },
+        { time: "11–12", status: "available", students: [], isBlocked: false },
+        { time: "12–13", status: "available", students: [], isBlocked: false },
+        { time: "13–14", status: "full", students: [{ name: "Carmen Diaz", seat: "E-04" }], isBlocked: false },
+      ],
+    },
+  ]);
 
   const handleSlotClick = (room, slot) => {
     setSelectedSlot({ room, slot });
   };
 
-  const addStudent = () => {
-    const name = prompt("Student name:");
-    if (!name || !selectedSlot) return;
+  // Filter rooms based on search query
+  const filteredRooms = rooms.filter(room => {
+    const searchLower = search.toLowerCase();
+    
+    // Match room name
+    if (room.name.toLowerCase().includes(searchLower)) {
+      return true;
+    }
+    
+    // Match student names within slots
+    const hasMatchingStudent = room.slots.some(slot => 
+      slot.students.some(student => {
+        const studentName = typeof student === 'string' ? student : student.name;
+        return studentName.toLowerCase().includes(searchLower);
+      })
+    );
+    
+    return hasMatchingStudent;
+  });
 
-    selectedSlot.slot.students.push(name);
-    setSelectedSlot({ ...selectedSlot }); // force re-render
+  const addStudent = (student) => {
+    if (!student || !selectedSlot) return;
+
+    const newStudent = typeof student === 'string' 
+      ? { name: student, seat: 'Unassigned' } 
+      : student;
+
+    setRooms(prevRooms =>
+      prevRooms.map(room => {
+        if (room.name === selectedSlot.room.name) {
+          return {
+            ...room,
+            slots: room.slots.map(slot => {
+              if (slot.time === selectedSlot.slot.time) {
+                return {
+                  ...slot,
+                  students: [...slot.students, newStudent]
+                };
+              }
+              return slot;
+            })
+          };
+        }
+        return room;
+      })
+    );
+
+    // Update the selected slot state
+    setSelectedSlot(prev => ({
+      ...prev,
+      slot: {
+        ...prev.slot,
+        students: [...prev.slot.students, newStudent]
+      }
+    }));
+  };
+
+  const removeStudent = (studentName) => {
+    if (!selectedSlot) return;
+
+    setRooms(prevRooms =>
+      prevRooms.map(room => {
+        if (room.name === selectedSlot.room.name) {
+          return {
+            ...room,
+            slots: room.slots.map(slot => {
+              if (slot.time === selectedSlot.slot.time) {
+                return {
+                  ...slot,
+                  students: slot.students.filter(s => 
+                    (typeof s === 'string' ? s : s.name) !== studentName
+                  )
+                };
+              }
+              return slot;
+            })
+          };
+        }
+        return room;
+      })
+    );
+
+    // Update the selected slot state
+    setSelectedSlot(prev => ({
+      ...prev,
+      slot: {
+        ...prev.slot,
+        students: prev.slot.students.filter(s => 
+          (typeof s === 'string' ? s : s.name) !== studentName
+        )
+      }
+    }));
+  };
+
+  const editStudent = (index, updatedStudent) => {
+    if (!selectedSlot) return;
+
+    setRooms(prevRooms =>
+      prevRooms.map(room => {
+        if (room.name === selectedSlot.room.name) {
+          return {
+            ...room,
+            slots: room.slots.map(slot => {
+              if (slot.time === selectedSlot.slot.time) {
+                const updatedStudents = [...slot.students];
+                updatedStudents[index] = updatedStudent;
+                return {
+                  ...slot,
+                  students: updatedStudents
+                };
+              }
+              return slot;
+            })
+          };
+        }
+        return room;
+      })
+    );
+
+    // Update the selected slot state
+    setSelectedSlot(prev => {
+      const updatedStudents = [...prev.slot.students];
+      updatedStudents[index] = updatedStudent;
+      return {
+        ...prev,
+        slot: {
+          ...prev.slot,
+          students: updatedStudents
+        }
+      };
+    });
+  };
+
+  const toggleBlockSlot = () => {
+    if (!selectedSlot) return;
+    
+    setRooms(prevRooms => 
+      prevRooms.map(room => {
+        if (room.name === selectedSlot.room.name) {
+          return {
+            ...room,
+            slots: room.slots.map(slot => {
+              if (slot.time === selectedSlot.slot.time) {
+                const newBlockedState = !slot.isBlocked;
+                return {
+                  ...slot,
+                  isBlocked: newBlockedState,
+                  status: newBlockedState ? 'blocked' : (slot.students.length === 0 ? 'available' : slot.status)
+                };
+              }
+              return slot;
+            })
+          };
+        }
+        return room;
+      })
+    );
+
+    // Update the selected slot state
+    setSelectedSlot(prev => ({
+      ...prev,
+      slot: {
+        ...prev.slot,
+        isBlocked: !prev.slot.isBlocked,
+        status: !prev.slot.isBlocked ? 'blocked' : (prev.slot.students.length === 0 ? 'available' : prev.slot.status)
+      }
+    }));
   };
 
   return (
@@ -76,6 +273,7 @@ export default function Dashboard() {
           inset: 0,
           display: "flex",
           flexDirection: "column",
+          marginTop: "80px",
         }}
       >
         <TopBar
@@ -87,15 +285,27 @@ export default function Dashboard() {
 
         <div className={styles.container}>
           <div className={styles.schedule}>
-            {rooms.map((room, i) => (
-              <RoomCard
-                key={i}
-                room={room}
-                onSlotClick={handleSlotClick}
-              />
-            ))}
+            {filteredRooms.length > 0 ? (
+              filteredRooms.map((room, i) => (
+                <RoomCard
+                  key={i}
+                  room={room}
+                  onSlotClick={handleSlotClick}
+                />
+              ))
+            ) : (
+              <div className={styles.noResults}>
+                <p>No rooms found matching &ldquo;{search}&rdquo;</p>
+              </div>
+            )}
           </div>
-          <Panel selectedSlot={selectedSlot} addStudent={addStudent} />
+          <Panel 
+            selectedSlot={selectedSlot} 
+            addStudent={addStudent}
+            removeStudent={removeStudent}
+            onToggleBlock={toggleBlockSlot}
+            onEditStudent={editStudent}
+          />
         </div>
       </div>
     </div>

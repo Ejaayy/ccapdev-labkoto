@@ -1,7 +1,7 @@
 import styles from "@/styles/MyReservations.module.css";
 
-export default function ReservationCard({ reservation, onCancel }) {
-  const { room, status, date, time, participants, capacity } = reservation;
+export default function ReservationCard({ reservation, onEdit }) {
+  const { room, status, date, time, seatNumber, participants, capacity } = reservation;
 
   const fillPercent = Math.round((participants.length / capacity) * 100);
 
@@ -11,7 +11,7 @@ export default function ReservationCard({ reservation, onCancel }) {
         <div className={styles.roomName}>{room}</div>
         <div
           className={`${styles.status} ${
-            status === "Confirmed" ? styles.confirmed : styles.pending
+            status === "Confirmed" ? styles.confirmed : status === "Pending" ? styles.pending : styles.failed
           }`}
         >
           {status}
@@ -24,6 +24,9 @@ export default function ReservationCard({ reservation, onCancel }) {
         </div>
         <div className={styles.infoRow}>
           <span className={styles.label}>Time:</span> {time}
+        </div>
+        <div className={styles.infoRow}>
+          <span className={styles.label}>Seat Number:</span> {seatNumber || "N/A"}
         </div>
         <div className={styles.infoRow}>
           <span className={styles.label}>Participants:</span>{" "}
@@ -39,8 +42,8 @@ export default function ReservationCard({ reservation, onCancel }) {
       </div>
 
       <div className={styles.cardFooter}>
-        <button className={styles.cancelBtn} onClick={onCancel}>
-          Cancel Reservation
+        <button className={styles.editBtn} onClick={onEdit}>
+          Edit Reservation
         </button>
       </div>
     </div>

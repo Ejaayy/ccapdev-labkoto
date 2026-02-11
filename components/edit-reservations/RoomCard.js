@@ -14,6 +14,7 @@ export default function RoomCard({ room, onSlotClick }) {
             key={i}
             time={slot.time}
             status={slot.status}
+            isBlocked={slot.isBlocked}
             onClick={() => onSlotClick(room, slot)}
           />
         ))}

@@ -10,8 +10,20 @@
 
 .profileContainer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.profileContainer:hover {
+    transform: scale(1.05);
+}
+
+.profileContainer:hover .profileHint {
+    opacity: 1;
 }
 
 .profileCircle {
@@ -23,6 +35,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.profileContainer:hover .profileCircle {
+    border-color: var(--accent-blue, #3B82F6);
+}
+
+.profileHint {
+    font-size: 0.65rem;
+    color: var(--accent-blue, #3B82F6);
+    margin-top: 4px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .profileCircle img {
