@@ -69,7 +69,7 @@
 }
 
 .main-panel{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #F7F7F7;
     display: flex;
@@ -253,6 +253,16 @@
     display: flex;
     justify-content: right;
     gap: 20px;
+}
+
+.back-button:hover {
+    box-shadow: 0 5px 20px 5px #d3d3d3;
+    cursor: pointer;
+}
+
+.continue-button:hover{
+    box-shadow: 0 5px 20px 5px #d3d3d3;
+    cursor: pointer;
 }
 
 .back-button{
