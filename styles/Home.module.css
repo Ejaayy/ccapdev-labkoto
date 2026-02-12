@@ -137,8 +137,9 @@ a.secondary {
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
     --button-secondary-border: #1a1a1a;
+
   }
-  
+}
 h2 {
   font-weight: 700;
   color: #242738;

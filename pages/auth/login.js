@@ -154,7 +154,7 @@ export default function Login(){
          
                 <div style={{position: "relative"}}>
                      <img src="../../../curves.png" style={{height: "100vh", width: "100vh"}}/>
-                    <h1 className={`${styles['brand-text']}`} style={{position: "absolute", top:"45%", left:"50%", fontSize: "80px"}}>LabKoTo</h1>
+                    <h1 className={`${styles['brand-text']}`} style={{position: "absolute", top:"45%", left:"30%", fontSize: "80px"}}>LabKoTo</h1>
                 </div>
                
 

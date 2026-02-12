@@ -272,7 +272,7 @@ export default function Dashboard() {
           inset: 0,
           display: "flex",
           flexDirection: "column",
-          marginTop: "80px",
+          marginTop: "100px",
         }}
       >
         <TopBar
