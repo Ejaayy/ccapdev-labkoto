@@ -1,4 +1,3 @@
-/* Containers */
 .container {
   display: grid;
   grid-template-columns: 2.5fr 1fr;
@@ -12,7 +11,6 @@
   padding-right: 10px;
 }
 
-/* No Results */
 .noResults {
   display: flex;
   align-items: center;
@@ -176,7 +174,6 @@
   margin-bottom: 6px;
 }
 
-/* Students */
 .studentItem {
   display: flex;
   justify-content: space-between;
@@ -219,7 +216,7 @@
   color: white;
 }
 
-/* Blocked Slot */
+
 .blocked {
   background: #374151;
   color: #9ca3af;
@@ -227,7 +224,6 @@
   cursor: not-allowed;
 }
 
-/* Block/Unblock Buttons */
 .blockBtn {
   width: 100%;
   padding: 10px 16px;

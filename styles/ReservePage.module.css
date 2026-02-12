@@ -12,7 +12,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
   padding: 30px 10%;
   gap: 0; 
   background-color: #1F2234;
@@ -290,7 +289,6 @@
     border-radius: 8px;
 }
 
-/* ========== Step 3: Reservation Summary ========== */
 .summaryContainer {
     padding: 20px 0;
 }
@@ -328,7 +326,6 @@
     font-weight: 600;
 }
 
-/* Anonymous Checkbox */
 .anonymousCheckbox {
     background-color: #f8fafc;
     border: 2px solid #e2e8f0;
@@ -365,7 +362,6 @@
     font-size: 0.85rem;
 }
 
-/* ========== Lab Search ========== */
 .labSearchContainer {
     display: flex;
     align-items: center;

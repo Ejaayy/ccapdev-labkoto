@@ -1,15 +1,12 @@
-/* Landing.module.css */
 
-/* Body / General */
 body {
-    background-color: #0F111A; /* Deep Dark Blue Background */
+    background-color: #0F111A; 
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     position: relative;
     overflow-x: hidden;
 }
 
-/* Background Glow Effects */
 .glow-bg {
     position: absolute;
     border-radius: 50%;
@@ -39,7 +36,6 @@ body {
     filter: blur(100px);
 }
 
-/* Navbar Links */
 .navbarSticky {
     position: sticky;
     top: 0;
@@ -153,7 +149,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* ========== Section Headers ========== */
 .sectionHeader {
     text-align: center;
     margin-bottom: 2rem;
@@ -185,7 +180,6 @@ body {
     margin: 0 auto;
 }
 
-/* ========== About Us Section ========== */
 .aboutSection {
     padding: 80px 0;
     position: relative;
@@ -296,17 +290,6 @@ body {
     gap: 1rem;
 }
 
-.contactIcon {
-    width: 50px;
-    height: 50px;
-    background: rgba(37, 99, 235, 0.2);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
 
 .contactItem strong {
     color: #ffffff;

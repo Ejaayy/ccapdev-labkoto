@@ -41,7 +41,7 @@ export default function Home() {
             </p>
             <div className="d-flex gap-3">
               <button className={`${styles['btn-primary-custom']}`} onClick={goToLogin}>BOOK SEATS</button>
-              <button className={`${styles['btn-outline-custom']}`}>EDIT BOOKING</button>
+              <button className={`${styles['btn-outline-custom']}`} onClick={goToLogin}>EDIT BOOKING</button>
             </div>
           </div>
           <div className={`${styles['custom-blur']}`}></div>
@@ -111,7 +111,6 @@ export default function Home() {
           <div className="col-lg-6">
             <div className={styles.aboutImageWrapper}>
               <div className={styles.aboutImageGlow}></div>
-              <img src="../../about-us.png" className={styles.aboutImage} alt="About Us"/>
             </div>
           </div>
         </div>
@@ -133,21 +132,21 @@ export default function Home() {
                 </p>
                 <div className={styles.contactDetails}>
                   <div className={styles.contactItem}>
-                    <div className={styles.contactIcon}>📍</div>
+                    
                     <div>
                       <strong>Address</strong>
                       <p>De La Salle University, Manila</p>
                     </div>
                   </div>
                   <div className={styles.contactItem}>
-                    <div className={styles.contactIcon}>📧</div>
+                   
                     <div>
                       <strong>Email</strong>
                       <p>labkoto@dlsu.edu.ph</p>
                     </div>
                   </div>
                   <div className={styles.contactItem}>
-                    <div className={styles.contactIcon}>📞</div>
+                   
                     <div>
                       <strong>Phone</strong>
                       <p>(02) 8524-4611</p>
