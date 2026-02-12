@@ -62,7 +62,7 @@ export default function Panel({ selectedSlot, addStudent, removeStudent, onToggl
       <div className={styles.panelSection}>
         <div className={styles.panelLabel}>Status</div>
         <span className={isBlocked ? styles.blockedStatus : styles.openStatus}>
-          {isBlocked ? '🚫 Blocked' : '✅ Open'}
+          {isBlocked ? 'Blocked' : 'Open'}
         </span>
       </div>
 
@@ -72,7 +72,7 @@ export default function Panel({ selectedSlot, addStudent, removeStudent, onToggl
           className={isBlocked ? styles.unblockBtn : styles.blockBtn} 
           onClick={onToggleBlock}
         >
-          {isBlocked ? '🔓 Unblock Slot' : '🔒 Block Slot'}
+          {isBlocked ? 'Unblock Slot' : 'Block Slot'}
         </button>
         <p className={styles.blockHint}>
           {isBlocked 
@@ -120,14 +120,14 @@ export default function Panel({ selectedSlot, addStudent, removeStudent, onToggl
                         onClick={() => handleEditClick(student, i)}
                         title="Edit student"
                       >
-                        ✏️
+                        
                       </button>
                       <button
                         className={styles.removeBtn}
                         onClick={() => removeStudent(typeof student === 'string' ? student : student.name)}
                         title="Remove student"
                       >
-                        ❌
+                        
                       </button>
                     </div>
                   </>

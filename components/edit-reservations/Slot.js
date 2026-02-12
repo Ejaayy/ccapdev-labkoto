@@ -15,7 +15,7 @@ export default function Slot({ time, status, isBlocked, onClick }) {
 
   return (
     <div className={className} onClick={onClick}>
-      {isBlocked || status === "blocked" ? "🚫 " : ""}{time}
+      {isBlocked || status === "blocked" ? " " : ""}{time}
     </div>
   );
 }
