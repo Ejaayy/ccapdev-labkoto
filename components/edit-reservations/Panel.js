@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/Edit-reservations.module.css";
+import { FaPen } from 'react-icons/fa';
 
 export default function Panel({ selectedSlot, addStudent, removeStudent, onToggleBlock, onEditStudent }) {
   const [studentName, setStudentName] = useState("");
@@ -120,14 +121,14 @@ export default function Panel({ selectedSlot, addStudent, removeStudent, onToggl
                         onClick={() => handleEditClick(student, i)}
                         title="Edit student"
                       >
-                        
+                        <FaPen/>
                       </button>
                       <button
                         className={styles.removeBtn}
                         onClick={() => removeStudent(typeof student === 'string' ? student : student.name)}
                         title="Remove student"
                       >
-                        
+                        X
                       </button>
                     </div>
                   </>
