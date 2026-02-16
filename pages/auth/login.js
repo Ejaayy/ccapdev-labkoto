@@ -11,17 +11,6 @@ export default function Login(){
     const router = useRouter();
     const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-    const handleBack = () => {
-    if (isStudentSelectOpen || isAdminSelectOpen) {
-        setIsStudentSelectOpen(false);
-        setIsAdminSelectOpen(false);
-    } else {
-    
-        setIsModalOpen(false);
-    }
-};
-    const toggleStudentSelect = () => setIsStudentSelectOpen(!isStudentSelectOpen);
-    const toggleAdminSelect = () => setIsAdminSelectOpen(!isAdminSelectOpen);
     const handleStudentRegister = (e) => {
         e.preventDefault();
         router.push('/home');
@@ -37,116 +26,53 @@ export default function Login(){
                         
                     <div className={loginStyles.signUpModal}>
                         <div className={loginStyles.backButtonContainer}>
-                            <span onClick={handleBack} className={loginStyles.backButton}>&lt;</span>
+                            <span onClick={toggleModal} className={loginStyles.backButton}>&lt;</span>
                         </div>
                         <h1>Register Account</h1>
                         <h6>Join LabKoTo now!</h6>
 
+                        <form>
+                            <div className={loginStyles.formLayout}>
+                                    <div className={loginStyles.inputLayout}>
+                                    <div style={{ display: 'flex', gap: '16px' }}>
 
-                        {!isStudentSelectOpen && !isAdminSelectOpen && (
-                            <div className={loginStyles.roleSelector}>
-                            <button onClick={toggleStudentSelect} className={loginStyles.confirmButton}>
-                                Register as Student
-                            </button>
-
-                            <h6>OR</h6>
-
-                            <button onClick={toggleAdminSelect} className={loginStyles.confirmButton}>
-                                Register as Lab Technician
-                            </button>
-                        </div>
-                        )}
-
-
-
-                        {isStudentSelectOpen && (
-                            <form>
-                                <div className={loginStyles.formLayout}>
-                                     <div className={loginStyles.inputLayout}>
-                                        <div style={{ display: 'flex', gap: '16px' }}>
-
-                                            <div className={loginStyles.formBreak}>
-                                                <label className={loginStyles.formLabels} htmlFor="fname">First Name</label><br/>
-                                                <input type="text" id="fname" name="fname" />
-                                            </div>
-
-                                            <div className={loginStyles.formBreak}>
-                                                <label className={loginStyles.formLabels} htmlFor="lname">Last Name</label><br/>
-                                                <input type="text" id="lname" name="lname" />
-                                            </div>
+                                        <div className={loginStyles.formBreak}>
+                                            <label className={loginStyles.formLabels} htmlFor="fname">First Name</label><br/>
+                                            <input className={loginStyles.inputboxes} type="text" id="fname" name="fname" required/>
                                         </div>
 
                                         <div className={loginStyles.formBreak}>
-                                            <label  className={loginStyles.formLabels} htmlFor="email">DLSU Email Address</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="email" name="email" /><br/>
-                                        </div>
-
-                                        <div className={loginStyles.formBreak}>
-                                            <label  className={loginStyles.formLabels} htmlFor="id">ID Number</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="id" name="id" /><br/>
-                                        </div>
-
-                                        <div className={loginStyles.formBreak}>
-                                            <label className={loginStyles.formLabels} htmlFor="pass1">Password</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="pass1" name="pass1" /><br/>
-                                        </div>
-
-                                        <div className={loginStyles.formBreak}>
-                                            <label className={loginStyles.formLabels} htmlFor="pass2">Re-enter Password</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="pass2" name="pass2" /><br/>
+                                            <label className={loginStyles.formLabels} htmlFor="lname">Last Name</label><br/>
+                                            <input className={loginStyles.inputboxes} type="text" id="lname" name="lname" required/>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <button onClick={handleStudentRegister} className={loginStyles.confirmButton} >  Register </button>
+                                    <div className={loginStyles.formBreak}>
+                                        <label className={loginStyles.formLabels} htmlFor="email">DLSU Email Address</label><br/>
+                                        <input className={loginStyles.inputboxes} style={{ width: '100%' }} type="text" id="email" name="email" required/><br/>
+                                    </div>
+
+                                    <div className={loginStyles.formBreak}>
+                                        <label className={loginStyles.formLabels} htmlFor="id">ID Number</label><br/>
+                                        <input className={loginStyles.inputboxes} style={{ width: '100%' }} type="text" id="id" name="id" required/><br/>
+                                    </div>
+
+                                    <div className={loginStyles.formBreak}>
+                                        <label className={loginStyles.formLabels} htmlFor="pass1">Password</label><br/>
+                                        <input className={loginStyles.inputboxes} style={{ width: '100%' }} type="text" id="pass1" name="pass1" required/><br/>
+                                    </div>
+
+                                    <div className={loginStyles.formBreak}>
+                                        <label className={loginStyles.formLabels} htmlFor="pass2">Re-enter Password</label><br/>
+                                        <input className={loginStyles.inputboxes} style={{ width: '100%' }} type="text" id="pass2" name="pass2" required/><br/>
                                     </div>
                                 </div>
-                            </form>
-                        )}
 
-                        {isAdminSelectOpen && (
-                            <form>
-                                <div className={loginStyles.formLayout}>
-                                     <div className={loginStyles.inputLayout}>
-                                        <div style={{ display: 'flex', gap: '16px' }}>
-
-                                            <div className={loginStyles.formBreak}>
-                                                <label className={loginStyles.formLabels} htmlFor="fname">First Name</label><br/>
-                                                <input type="text" id="fname" name="fname" />
-                                            </div>
-
-                                            <div className={loginStyles.formBreak}>
-                                                <label className={loginStyles.formLabels} htmlFor="lname">Last Name</label><br/>
-                                                <input type="text" id="lname" name="lname" />
-                                            </div>
-                                        </div>
-
-                                        <div className={loginStyles.formBreak}>
-                                            <label  className={loginStyles.formLabels} htmlFor="email">DLSU Email Address</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="email" name="email" /><br/>
-                                        </div>
-
-                                        <div className={loginStyles.formBreak}>
-                                            <label className={loginStyles.formLabels} htmlFor="pass1">Password</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="pass1" name="pass1" /><br/>
-                                        </div>
-
-                                        <div className={loginStyles.formBreak}>
-                                            <label className={loginStyles.formLabels} htmlFor="pass2">Re-enter Password</label><br/>
-                                            <input style={{ width: '100%' }} type="text" id="pass2" name="pass2" /><br/>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <button onClick={handleStudentRegister} className={loginStyles.confirmButton} >  Register </button>
-                                    </div>
+                                <div>
+                                    <button onClick={handleStudentRegister} className={loginStyles.confirmButton} >  Register </button>
                                 </div>
-                            </form>
-                        )}
-
-                        
-                        
-                    
+                            </div>
+                        </form>
                     </div>
                 
                 )}

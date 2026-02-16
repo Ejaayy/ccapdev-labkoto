@@ -98,7 +98,7 @@
 
 .signUpModal{
     position: absolute;
-    width: 500px;
+    width: 550px;
     height: 700px;
     top: 50%;
     left: 50%;
@@ -113,7 +113,7 @@
 }
 
 .signUpModal h1{
-    margin-top: 35px;
+    margin-top: 10px;
     margin-bottom: 0px;
     color: #000;
     font-size: 36px;
@@ -225,4 +225,13 @@
 .forgotPassword:hover {
     color: #0599cc;
     text-decoration: underline;
+}
+
+.inputboxes{
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    height: 35px;
+    width: 100%;
+    padding: 5px;
 }
