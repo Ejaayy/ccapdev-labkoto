@@ -1,5 +1,5 @@
-import styles from '../../styles/Landing.module.css';
-import loginStyles from '../../styles/loginPage.module.css';
+
+import loginStyles from './login.module.css';
 import {useState} from 'react';
 import { useRouter } from 'next/router';
 
@@ -80,7 +80,7 @@ export default function Login(){
          
                 <div style={{position: "relative"}}>
                      <img src="../../../curves.png" style={{height: "100vh", width: "100vh"}}/>
-                    <h1 className={`${styles['brand-text']}`} style={{position: "absolute", top:"45%", left:"30%", fontSize: "80px"}}>LabKoTo</h1>
+                    <h1 className='brand-text' style={{position: "absolute", top:"45%", left:"30%", fontSize: "80px"}}>LabKoTo</h1>
                 </div>
                
 

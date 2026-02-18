@@ -3,7 +3,7 @@ import HomeNavbar from "@/components/layout/HomeNavbar/HomeNavbar";
 import TopBar from "@/components/edit-reservations/TopBar/TopBar";
 import RoomCard from "@/components/edit-reservations/RoomCard/RoomCard";
 import Panel from "@/components/edit-reservations/Panel/Panel";
-import styles from "@/styles/Edit-reservations.module.css";
+import styles from "./ManageReservations.module.css";
 
 export default function Dashboard() {
   const [date, setDate] = useState("");

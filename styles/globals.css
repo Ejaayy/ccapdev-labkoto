@@ -55,3 +55,35 @@ a {
     color-scheme: dark;
   }
 }
+
+.brand-text {
+    background: var(--Brand-Theme, linear-gradient(90deg, #0BBFED 0%, #A6E6FF 9.62%, #2075FD 49.04%, #0BB9FF 84.62%));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 0.08em; 
+    text-transform: none;
+    text-decoration: none;
+
+    display: inline-block;
+    margin-right: 1.5rem;
+    
+    filter: drop-shadow(0 0 8px rgba(11, 191, 237, 0.3)) 
+            drop-shadow(0 2px 4px rgba(11, 191, 237, 0.2));
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.brand-text:hover {
+    filter: drop-shadow(0 0 12px rgba(11, 191, 237, 0.5)) 
+            drop-shadow(0 2px 6px rgba(11, 191, 237, 0.3));
+    transform: translateY(-1px);
+    letter-spacing: 0.1em;
+    
+}

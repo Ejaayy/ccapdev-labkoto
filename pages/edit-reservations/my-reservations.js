@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import HomeNavbar from "@/components/layout/HomeNavbar/HomeNavbar";
 import ReservationCard from "@/components/edit-reservations/ReservationCard/ReservationCard";
-import styles from "@/styles/MyReservations.module.css";
+import styles from "./MyReservations.module.css";
 
 export default function MyReservations() {
   const router = useRouter();
