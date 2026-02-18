@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from '../styles/Landing.module.css';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
+import Navbar from '../components/layout/Navbar/Navbar';
+import Footer from '../components/layout/Footer/Footer';
 import { useRouter } from 'next/router';
 
 const geistSans = Geist({

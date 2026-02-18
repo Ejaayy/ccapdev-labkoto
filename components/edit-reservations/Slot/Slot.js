@@ -1,4 +1,4 @@
-import styles from "@/styles/Edit-reservations.module.css";
+import styles from "./Slot.module.css";
 
 export default function Slot({ time, status, isBlocked, onClick }) {
   let className = styles.slot;

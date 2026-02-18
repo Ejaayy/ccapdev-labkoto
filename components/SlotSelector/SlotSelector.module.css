@@ -1,0 +1,89 @@
+.slotContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.labRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1F2234;    
+  border: 1px solid #1E293B;
+  border-radius: 8px;
+  padding: 20px 30px;
+  transition: transform 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.labRow:hover {
+  border-color: #3B82F6;
+  transform: translateY(-2px);
+}
+
+.labInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.labName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.labIcon {
+  color: #3B82F6;
+  font-size: 0.9rem;
+}
+
+.timeRange {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+.duration, .labId {
+  color: #ced5df;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.bookingAction {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.seatInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.seatPrice {
+  color: #37c7e1;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.seatsLeft {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #e0e4e9;
+}
+
+.urgent {
+  color: #e6823b; 
+}
+
+.expandIcon {
+  color: #3B82F6;
+  font-size: 0.8rem;
+}

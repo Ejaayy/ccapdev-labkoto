@@ -1,0 +1,101 @@
+/* Reservation Card */
+.card {
+  background-color: #1f2234;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.roomName {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.confirmed {
+  background-color: #37c7e1;
+  color: #0f172a;
+}
+
+.failed {
+  background-color: #f87171;
+  color: #ffffff;
+}
+
+.pending {
+  background-color: #fbbf24;
+  color: #0f172a;
+}
+
+/* Card Body */
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoRow {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.participantList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.participant {
+  background-color: #242738;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.cardFooter {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editBtn {
+  background-color: #3B82F6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.editBtn:hover {
+  background-color: #2563eb;
+}

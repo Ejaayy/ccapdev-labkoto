@@ -1,5 +1,5 @@
-import Slot from "./Slot";
-import styles from "@/styles/Edit-reservations.module.css";
+import Slot from "../Slot/Slot";
+import styles from "./RoomCard.module.css";
 
 export default function RoomCard({ room, onSlotClick }) {
   return (

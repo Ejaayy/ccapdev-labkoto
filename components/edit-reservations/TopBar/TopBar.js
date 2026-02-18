@@ -1,4 +1,4 @@
-import styles from "@/styles/Edit-reservations.module.css";
+import styles from "./TopBar.module.css";
 import { FaSearch, FaCalendarAlt } from "react-icons/fa";
 
 export default function TopBar({ date, setDate, search, setSearch }) {

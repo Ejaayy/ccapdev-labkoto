@@ -1,4 +1,4 @@
-import styles from '@/styles/ReservePage.module.css';
+import styles from './DateSelector.module.css';
 
 const DATES = [
   { day: 'Sun', date: '08 Feb', labs: 0 },

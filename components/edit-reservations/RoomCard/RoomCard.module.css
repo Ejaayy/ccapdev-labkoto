@@ -1,0 +1,33 @@
+
+/* Room Cards */
+.roomCard {
+  background: #1F2234;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.roomName {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+
+.capacity {
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+/* Slots */
+.slots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}

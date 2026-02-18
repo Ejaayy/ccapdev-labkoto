@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import HomeNavbar from "@/components/layout/HomeNavbar";
+import HomeNavbar from "@/components/layout/HomeNavbar/HomeNavbar";
 import AccountStyles from "@/styles/AccountPage.module.css";
 
 export default function Account() {

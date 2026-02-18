@@ -1,4 +1,4 @@
-import styles from "@/styles/MyReservations.module.css";
+import styles from "./ReservationCard.module.css";
 
 export default function ReservationCard({ reservation, onEdit }) {
   const { room, status, date, time, seatNumber, participants, capacity } = reservation;

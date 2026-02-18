@@ -1,10 +1,10 @@
 import ReserveStyles from '@/styles/ReservePage.module.css'
-import HomeNavbar from '@/components/layout/HomeNavbar';
-import BookingStepper from '@/components/Stepper'
-import DateSelector from '@/components/DateSelector';
-import LabSlotSelector from '@/components/SlotSelector';
+import HomeNavbar from '@/components/layout/HomeNavbar/HomeNavbar';
+import BookingStepper from '@/components/Stepper/Stepper'
+import DateSelector from '@/components/DateSelector/DateSelector';
+import LabSlotSelector from '@/components/SlotSelector/SlotSelector';
 import { useState } from 'react';
-import SeatSelector from '@/components/SeatSelector';
+import SeatSelector from '@/components/SeatSelector/SeatSelector';
 
 export default function ReservePage(){
 

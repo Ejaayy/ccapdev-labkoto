@@ -1,4 +1,4 @@
-import styles from '@/styles/Landing.module.css';
+import styles from './Navbar.module.css';
 import Link from 'next/link';
 
 export default function Navbar() {

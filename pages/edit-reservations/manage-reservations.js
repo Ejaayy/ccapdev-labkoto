@@ -1,8 +1,8 @@
 import { useState } from "react";
-import HomeNavbar from "@/components/layout/HomeNavbar";
-import TopBar from "@/components/edit-reservations/TopBar";
-import RoomCard from "@/components/edit-reservations/RoomCard";
-import Panel from "@/components/edit-reservations/Panel";
+import HomeNavbar from "@/components/layout/HomeNavbar/HomeNavbar";
+import TopBar from "@/components/edit-reservations/TopBar/TopBar";
+import RoomCard from "@/components/edit-reservations/RoomCard/RoomCard";
+import Panel from "@/components/edit-reservations/Panel/Panel";
 import styles from "@/styles/Edit-reservations.module.css";
 
 export default function Dashboard() {

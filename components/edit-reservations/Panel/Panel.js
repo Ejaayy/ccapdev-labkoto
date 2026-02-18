@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "@/styles/Edit-reservations.module.css";
+import styles from "./Panel.module.css";
 import { FaPen } from 'react-icons/fa';
 
 export default function Panel({ selectedSlot, addStudent, removeStudent, onToggleBlock, onEditStudent }) {

@@ -1,0 +1,28 @@
+/* Slots */
+
+.slot {
+  padding: 10px 6px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.available {
+  background: #0F172A;
+  color: #37c7e1;
+}
+
+.almostFull {
+  background: #1e293b;
+  color: #FACC15;
+}
+
+.full {
+  background: #1F1A2A;
+  color: #F87171;
+}
+
+

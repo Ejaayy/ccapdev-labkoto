@@ -1,0 +1,44 @@
+.navbarSticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #25283a;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
+}
+
+.navbarSticky a:not(.brand-text) {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #94a3b8;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.navLink {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.navLink:hover {
+    color: #ffffff !important;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.brand-text {
+    background: var(--Brand-Theme, linear-gradient(90deg, #0BBFED 0%, #A6E6FF 9.62%, #2075FD 49.04%, #0BB9FF 84.62%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    text-decoration: none !important;
+
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(11, 191, 237, 0.35));
+    transition: all 0.3s ease;
+}

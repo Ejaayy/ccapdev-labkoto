@@ -1,6 +1,6 @@
 import { useState } from "react";
-import HomeNavbar from "@/components/layout/HomeNavbar";
-import styles from "../styles/HomeNavbar.module.css";
+import HomeNavbar from "@/components/layout/HomeNavbar/HomeNavbar";
+import styles from "../components/layout/HomeNavbar/HomeNavbar.module.css";
 import SelectStudent from "@/components/home/SelectStudents";
 import CustomCalendar from "@/components/home/CustomCalendar";
 import Announcements from "@/components/home/Announcements";

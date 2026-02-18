@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '@/styles/SeatSelector.module.css';
+import styles from './SeatSelector.module.css';
 
 const TABLES = [
   { id: 'T1', seats: ['A1', 'A2', 'A3'], reserved: ['A1', 'A2'] },

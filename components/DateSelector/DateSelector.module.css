@@ -1,0 +1,69 @@
+.dateSelectorContainer {
+  display: flex;
+  align-items: center;
+  background-color: white; 
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.dateGrid {
+  display: flex;
+  flex: 1;
+}
+
+.dateCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  border-right: 1px solid #ececec;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dateCard:last-child {
+  border-right: none;
+}
+
+
+.activeDate {
+  background-color: #37c7e1;
+}
+
+.activeDate .dateLabel, 
+.activeDate .labCount {
+  color: white ;
+}
+
+.dateLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.labCount {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #37c7e1; 
+}
+
+
+.navArrow {
+  padding: 0 15px;
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 100%;
+}
+
+.navArrow:hover {
+  color: white;
+  background-color: #1f2937;
+}

@@ -1,0 +1,22 @@
+.brand-text {
+    background: var(--Brand-Theme, linear-gradient(90deg, #0BBFED 0%, #A6E6FF 9.62%, #2075FD 49.04%, #0BB9FF 84.62%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    text-decoration: none !important;
+
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(11, 191, 237, 0.35));
+    transition: all 0.3s ease;
+}
+
+.brand-text:hover {
+    filter: drop-shadow(0 0 15px rgba(11, 191, 237, 0.5));
+    transform: translateY(-1px);
+}

@@ -1,4 +1,4 @@
-import styles from '@/styles/ReservePage.module.css';
+import styles from './Stepper.module.css';
 import { FaMicroscope, FaUser, FaPlus, FaCreditCard, FaCheckCircle } from 'react-icons/fa';
 
 const STEPS = [

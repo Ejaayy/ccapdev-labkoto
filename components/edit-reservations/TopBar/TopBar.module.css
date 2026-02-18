@@ -1,0 +1,73 @@
+/* TopBar */
+.topBar {
+  background: #1F2234;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1E293B;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.topBarTitle h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.topBarTitle p {
+  margin: 4px 0 0 0;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.topBarFilters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  background: #242738;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0 12px;
+  transition: border-color 0.2s ease;
+}
+
+.filterGroup:focus-within {
+  border-color: #3b82f6;
+}
+
+.filterIcon {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.dateInput,
+.searchInput {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.dateInput {
+  width: 150px;
+}
+
+.searchInput {
+  width: 200px;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}

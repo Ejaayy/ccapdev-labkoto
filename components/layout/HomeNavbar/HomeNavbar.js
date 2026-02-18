@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styles from '@/styles/HomeNavbar.module.css';
+import styles from './HomeNavbar.module.css';
 
 export default function HomeNavbar({ style, className, ...rest }) {
   const [isOpen, setIsOpen] = useState(false);
